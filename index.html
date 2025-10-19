@@ -1,48 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Resume - ชื่อ นามสกุล</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>แนะนำตัว — นายชัยวุุฒิ จามะรี่ย์</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>ชื่อ นามสกุล</h1>
-    <p>ตำแหน่งที่สนใจ: Front-End Developer</p>
-  </header>
+<main class="container">
+<section class="card profile">
+<div class="avatar">
+<img src="https://scontent.fbkk22-6.fna.fbcdn.net/v/t39.30808-6/445364729_1495265021199046_5173516776718377060_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=nhBVPvP4yIsQ7kNvwEQsu56&_nc_oc=Adlg4rGSPOdHtJwbiZIKBzVYAV-_KwAP21vmMzxp4uaY3bazkHgUq3yyqAEaM42zh5s&_nc_zt=23&_nc_ht=scontent.fbkk22-6.fna&_nc_gid=Fh6Ip6GOc5BtGn5KmcZQeA&oh=00_AfeaRx_UNjGg9X6K7tbzFTAeIxI_3erwoVTZNwnnVzXx1A&oe=68FA2713" alt="Avatar">
+</div>
+<h1 id="name">Mr.Chaiwut Chamaree</h1>
+<p class="role">Full Stack Developer</p>
+<div class="badges">
+<span class="badge">ภาษา: ไทย • อังกฤษ</span>
+<span class="badge">ประสบการณ์: 3 ปี</span>
+</div>
+<div class="actions">
+<button class="btn primary" onclick="copyIntro()">คัดลอกแนะนำตัว</button>
+<a class="btn ghost" href="#contact">ติดต่อ</a>
+</div>
+</section>
 
-  <section id="profile">
-    <h2>ข้อมูลส่วนตัว</h2>
-    <ul>
-      <li>อีเมล: student@email.com</li>
-      <li>เบอร์โทร: 099-999-9999</li>
-      <li>ที่อยู่: กรุงเทพมหานคร</li>
-    </ul>
-  </section>
 
-  <section id="education">
-    <h2>ประวัติการศึกษา</h2>
-    <p>ปวส. เทคโนโลยีสารสนเทศ - วิทยาลัยเทคโนโลยีอรรถวิทย์พณิชยการ</p>
-  </section>
+<section class="card info">
+<div class="headline">
+<div>
+<div class="intro">ผมคือ <span id="typed" class="typed">นักพัฒนาเว็บที่ชอบทำของสวยๆ</span></div>
+</div>
+<div class="date">อัปเดตล่าสุด: <strong id="today"></strong></div>
+</div>
 
-  <section id="skills">
-    <h2>ทักษะ</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Git / GitHub</li>
-      <li>UI Design (Figma)</li>
-    </ul>
-  </section>
 
-  <section id="projects">
-    <h2>ผลงาน</h2>
-    <p>เว็บไซต์แนะนำสินค้า - พัฒนาโดยใช้ HTML/CSS/JS</p>
-  </section>
+<div class="meta">
+<div class="item"><span class="label">ตำแหน่ง</span><span class="value">Frontend Developer</span></div>
+<div class="item"><span class="label">ประจำ</span><span class="value">กรุงเทพฯ, ไทย</span></div>
+<div class="item"><span class="label">อีเมล</span><span class="value">youremail@example.com</span></div>
+</div>
 
-  <footer>
-    <button onclick="showMessage()">คลิกดูข้อความ</button>
-  </footer>
 
-  <script src="script.js"></script>
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS / Tailwind</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React</div>
+<div class="skill">Node.js</div>
+</div>
+
+
+<div class="about">
+<p>ผมชอบสร้างเว็บที่ใช้งานได้จริงและมีหน้าตาสวยงาม รวมทั้งใส่ใจประสบการณ์ผู้ใช้ ถ้าคุณต้องการทำโปรเจคร่วมกัน โปรดติดต่อมานะครับ</p>
+</div>
+
+
+<div id="contact" class="contact">
+<a class="btn primary" href="mailto:youremail@example.com">ส่งอีเมล</a>
+<a class="btn ghost" href="#" onclick="downloadCard()">ดาวน์โหลด vCard</a>
+<button class="btn ghost" onclick="toggleTheme()">สลับธีม</button>
+</div>
+</section>
+</main>
+
+
+<script src="script.js"></script>
 </body>
 </html>
