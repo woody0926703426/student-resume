@@ -1,0 +1,27 @@
+name: Deploy Website
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ขั้นตอนที่ 1: ดึงซอร์สโค้ดจาก repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # ขั้นตอนที่ 2: ตรวจสอบความถูกต้องของ HTML
+      - name: Validate HTML
+        uses: davidanson/html-validator-action@v1
+
+      # ขั้นตอนที่ 3: Deploy ไปยัง Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: student-resume
+          directory: ./
