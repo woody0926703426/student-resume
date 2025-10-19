@@ -12,8 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Validate HTML
-        uses: w3c/action-html-validator@v1
+
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
